@@ -3,8 +3,10 @@ function startClock() {
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
+  h = checkTime(h);
   m = checkTime(m);
   s = checkTime(s);
+
   document.getElementById("vrijeme").innerHTML = h + ":" + m + ":" + s;
   setTimeout(startClock, 1000);
   const postavke = { weekday: "long", month: "long", day: "numeric" };
